@@ -3,8 +3,7 @@ type Post = {
   content: string;
 };
 export default async function Page() {
-  const res = await fetch("http://localhost:3001/posts");
-
+  const res = await fetch("http://localhost:8000/posts");
   if (!res.ok) {
     console.error("Network response was not ok");
     return;
