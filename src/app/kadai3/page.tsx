@@ -1,19 +1,26 @@
-import  React  from  "react";
-export  default  async function  Page() {
+type Post = {
+  title: string;
+  content: string;
+};
+export default async function Page() {
+  const res = await fetch("http://localhost:3001/posts");
 
-    const tes = async (formData:FormData) => {
-        "use server"
-        //server側にログが出ます
-    console.log(formData);
-    }
-    return (
-        <div>
-            <form action={tes}>
-                <input type="text" name="name" placeholder="名前" required/>
-                <button type="submit">
-                    送信
-                </button>
-            </form>
+  if (!res.ok) {
+    console.error("Network response was not ok");
+    return;
+  }
+
+  const posts: Post[] = await res.json();
+  console.log(posts);
+
+  return (
+    <div>
+      {posts.map((post: Post) => (
+        <div key={post.title}>
+          <h2>{post.title}</h2>
+          <p>{post.content}</p>
         </div>
-    );
+      ))}
+    </div>
+  );
 }
