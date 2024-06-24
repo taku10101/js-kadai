@@ -7,6 +7,20 @@
     {
       "title": "Post 2",
       "content": "This is the"
+    },
+    {
+      "title": "3",
+      "content": "3"
+    }
+  ],
+  "users": [
+    {
+      "name": "John",
+      "age": 25
+    },
+    {
+      "name": "Jane",
+      "age": 30
     }
   ]
 }
