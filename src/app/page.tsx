@@ -23,24 +23,8 @@ export default function Home() {
       href: "/kadai5",
     },
     {
-      title: "課題6",
+      title: "課題6-ktok_components",
       href: "/kadai6",
-    },
-    {
-      title: "課題7",
-      href: "/kadai7",
-    },
-    {
-      title: "課題8",
-      href: "/kadai8",
-    },
-    {
-      title: "課題9",
-      href: "/kadai9",
-    },
-    {
-      title: "課題10",
-      href: "/kadai10",
     },
   ];
 
